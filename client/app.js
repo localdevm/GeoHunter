@@ -29,7 +29,16 @@ labTutorApp.controller('StartCtrl', [ '$scope', '$http', function ($scope, $http
 
 }]);
 labTutorApp.controller('MainController', ['$scope', '$http', function($scope, $http){
-  
+
+  $scope.lorem = function(){
+    $http({
+      method: 'GET',
+      url: 'http://localhost:3000/api/lorem'}).then(function (res){
+        console.log(res);
+      }, function(err){
+        console.log(err);
+      });
+  };
 }
 /*
 labTutorApp.controller('payPalController', ['$scope', '$http', function($scope, $http){

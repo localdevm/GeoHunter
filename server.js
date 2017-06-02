@@ -49,4 +49,14 @@ var charge = stripe.charges.create({
   // asynchronously called
 });
 })
+
+app.get('/api/lorem'; function(request, res){
+	$http({
+		method: 'GET',
+		url: ' http://loripsum.net/api/5'}).then(function (result){
+			console.log(result);
+		}, function(err){
+			console.log(err);
+		});
+});
 app.listen(3000);
