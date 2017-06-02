@@ -8,8 +8,34 @@
     <script src="angular-ui-router.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-controller="StartCtrl">
+  <body>
+    <div ng-controller="StartCtrl">
+      <h1>Facebook API</h1>
     <button ng-click="login()">Log in</button>
     {{ name }}
+  </div>
+  <div ng-controller="MainController">
+    <h1>Stripe single payment</h1>
+    <form action="/pay" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_ypj0c8TazFFVNBzkse6OGmDA"
+    data-amount="1000"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-zip-code="true"
+    data-currency="eur">
+  </script>
+</form>
+  </div>
+  <!--
+  <div ng-controller="payPalController">
+    <h1>Paypal API</h1>
+    <button ng-click="pay()">Log in</button>
+    {{ name }}
+  </div>
+-->
   </body>
 </html>
